@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./Projects.css";
+import { useNavigate } from "react-router-dom";
 
 /* GIF */
 import IntroGif from "../assets/projects/Intro.gif";
@@ -12,6 +13,8 @@ import OverExposed from "../assets/home/OverExposed.jpg";
 import HubStudios from "../assets/home/HubStudios.png";
 
 function Projects() {
+  const navigate = useNavigate();
+
   const projects = [
     { img: LiberaUscita, name: "Libera Uscita" },
     { img: AccaMagazine, name: "Acca Magazine" },
@@ -92,45 +95,55 @@ function Projects() {
       {/* CURSOR TRAIL */}
       <div className="cursor-glow-trail" ref={containerRef} />
 
-      {/* NAVBAR */}
-      <nav className="projects-nav">
-        <div className="back">←</div>
+      {/* WRAPPER CENTRALE */}
+      <div className="projects-wrapper">
 
-        <div className="title">
-          Gabriele's Portfolio 2026
-        </div>
+        {/* NAVBAR */}
+        <nav className="projects-nav">
 
-        <div className="nav-links">
-          <span className="active">Home</span>
-          <span>Packaging</span>
-          <span>Contact</span>
-        </div>
-      </nav>
-
-      {/* GIF */}
-      <div className="intro-gif">
-        <img src={IntroGif} alt="Intro" />
-
-        <div className="gif-label">
-          Check this out - HubStudios video.
-        </div>
-      </div>
-
-      {/* PICK TEXT */}
-      <div className="pick-text">
-        Pick your favorite.
-      </div>
-
-      {/* GRID */}
-      <div className="projects-grid">
-        {projects.map((p, i) => (
-          <div className="project-card" key={i}>
-            <img src={p.img} alt={p.name} />
-            <div className="project-name">{p.name}</div>
+          <div className="back" onClick={() => navigate("/")}>
+            ←
           </div>
-        ))}
-      </div>
 
+          <div className="title">
+            Gabriele's Portfolio 2026
+          </div>
+
+          <div className="nav-links">
+            <span className="active" onClick={() => navigate("/")}>
+              Home
+            </span>
+            <span>Packaging</span>
+            <span>Contact</span>
+          </div>
+
+        </nav>
+
+        {/* GIF */}
+        <div className="intro-gif">
+          <img src={IntroGif} alt="Intro" />
+
+          <div className="gif-label">
+            Check this out - HubStudios video.
+          </div>
+        </div>
+
+        {/* PICK TEXT */}
+        <div className="pick-text">
+          Pick your favorite.
+        </div>
+
+        {/* GRID */}
+        <div className="projects-grid">
+          {projects.map((p, i) => (
+            <div className="project-card" key={i}>
+              <img src={p.img} alt={p.name} />
+              <div className="project-name">{p.name}</div>
+            </div>
+          ))}
+        </div>
+
+      </div>
     </div>
   );
 }
