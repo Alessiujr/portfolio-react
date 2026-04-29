@@ -165,7 +165,11 @@
 
 .project-name {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 14px;
+  bottom: 12px;
+  left: 12px;
+  font-size: 36px;       /* più grande */
+  text-transform: uppercase; /* MAIUSCOLO */
+  font-family: serif;
+  color: #fff;
+  letter-spacing: 1px;   /* più “design” */
 }
