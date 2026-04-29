@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Projects.css";
 import { useNavigate } from "react-router-dom";
 
@@ -12,8 +12,13 @@ import NoteKiller from "../assets/home/NoteKiller.PNG";
 import OverExposed from "../assets/home/OverExposed.jpg";
 import HubStudios from "../assets/home/HubStudios.png";
 
+/* CONTACT IMAGE */
+import ContactImg from "../assets/contact/Contact.png";
+
 function Projects() {
   const navigate = useNavigate();
+
+  const [showContact, setShowContact] = useState(false);
 
   const projects = [
     { img: LiberaUscita, name: "Libera Uscita" },
@@ -23,9 +28,7 @@ function Projects() {
     { img: HubStudios, name: "Hub Studios" },
   ];
 
-  /* =========================
-     CURSOR TRAIL
-  ========================= */
+  /* CURSOR TRAIL */
   const pointsRef = useRef([]);
   const containerRef = useRef(null);
   const rafRef = useRef(null);
@@ -38,9 +41,7 @@ function Projects() {
       if (points.length > 25) points.shift();
     };
 
-    const handleMouseMove = (e) => {
-      addPoint(e.clientX, e.clientY);
-    };
+    const handleMouseMove = (e) => addPoint(e.clientX, e.clientY);
 
     const animate = () => {
       const container = containerRef.current;
@@ -92,10 +93,9 @@ function Projects() {
   return (
     <div className="projects-page">
 
-      {/* CURSOR TRAIL */}
+      {/* CURSOR */}
       <div className="cursor-glow-trail" ref={containerRef} />
 
-      {/* WRAPPER CENTRALE */}
       <div className="projects-wrapper">
 
         {/* NAVBAR */}
@@ -110,11 +110,11 @@ function Projects() {
           </div>
 
           <div className="nav-links">
-            <span className="active" onClick={() => navigate("/")}>
-              Home
-            </span>
+            <span onClick={() => navigate("/")}>Home</span>
             <span>Packaging</span>
-            <span>Contact</span>
+            <span onClick={() => setShowContact(true)}>
+              Contact
+            </span>
           </div>
 
         </nav>
@@ -122,7 +122,6 @@ function Projects() {
         {/* GIF */}
         <div className="intro-gif">
           <img src={IntroGif} alt="Intro" />
-
           <div className="gif-label">
             Check this out - HubStudios video.
           </div>
@@ -144,6 +143,22 @@ function Projects() {
         </div>
 
       </div>
+
+      {/* CONTACT MODAL */}
+      {showContact && (
+        <div
+          className="contact-overlay"
+          onClick={() => setShowContact(false)}
+        >
+          <div
+            className="contact-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img src={ContactImg} alt="Contact" />
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
