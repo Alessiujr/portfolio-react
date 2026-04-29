@@ -91,13 +91,26 @@
   display: flex;
   justify-content: center;
   margin: 20px 0;
-  position: relative;
+
+  position: relative; /* necessario per overlay */
   z-index: 2;
 }
 
 .intro-gif img {
   width: 60%;
   border-radius: 10px;
+}
+
+.gif-label {
+  position: absolute;
+  bottom: 15px;
+  left: 22%;
+  color: #fff;
+  font-size: 24px;
+  font-family: serif;
+  padding: 6px 12px;
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
 }
 
 /* ================= PICK TEXT ================= */
@@ -109,7 +122,7 @@
   color: #fff;         /* testo bianco */
   padding: 14px 28px;
   border-radius: 10px;
-  font-size: 20px;     /* più grande */
+  font-size: 24px;     /* più grande */
   font-family: serif;
   text-align: center;
   position: relative;

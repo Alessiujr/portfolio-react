@@ -110,6 +110,10 @@ function Projects() {
       {/* GIF */}
       <div className="intro-gif">
         <img src={IntroGif} alt="Intro" />
+
+        <div className="gif-label">
+          Check this out - HubStudios video.
+        </div>
       </div>
 
       {/* PICK TEXT */}
