@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "./Hero.css";
 import { useNavigate } from "react-router-dom";
 
-/* IMMAGINI (AttaccoManoide RIMOSSA) */
+/* IMMAGINI */
 import AccaMagazine from "../assets/home/AccaMagazine.png";
 import LiberaUscita from "../assets/home/LiberaUscita.jpg";
 import NoteKiller from "../assets/home/NoteKiller.PNG";
@@ -10,16 +10,18 @@ import OverExposed from "../assets/home/OverExposed.jpg";
 import HubStudios from "../assets/home/HubStudios.png";
 
 function Hero() {
+  const navigate = useNavigate();
+
   const pointsRef = useRef([]);
   const containerRef = useRef(null);
   const rafRef = useRef(null);
-  const navigate = useNavigate();
+
   const projects = [
-    AccaMagazine,
-    LiberaUscita,
-    NoteKiller,
-    OverExposed,
-    HubStudios,
+    { img: AccaMagazine, name: "AccaMagazine" },
+    { img: LiberaUscita, name: "Libera Uscita" },
+    { img: NoteKiller, name: "Note Killer" },
+    { img: OverExposed, name: "OverExposed" },
+    { img: HubStudios, name: "HubStudios." },
   ];
 
   useEffect(() => {
@@ -92,7 +94,12 @@ function Hero() {
         <div className="top-gallery">
           {projects.concat(projects).map((project, index) => (
             <div className="gallery-item" key={index}>
-              <img src={project} alt={`Project ${index + 1}`} />
+              <img src={project.img} alt={project.name} />
+
+              <div className="gallery-title">
+                {project.name}
+              </div>
+
             </div>
           ))}
         </div>
