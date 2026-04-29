@@ -1,26 +1,31 @@
 import { useEffect, useRef } from "react";
-import "./Hero.css";
-import { useNavigate } from "react-router-dom";
+import "./Projects.css";
 
-/* IMMAGINI (AttaccoManoide RIMOSSA) */
+/* GIF */
+import IntroGif from "../assets/projects/Intro.gif";
+
+/* IMMAGINI */
 import AccaMagazine from "../assets/home/AccaMagazine.png";
 import LiberaUscita from "../assets/home/LiberaUscita.jpg";
 import NoteKiller from "../assets/home/NoteKiller.PNG";
 import OverExposed from "../assets/home/OverExposed.jpg";
 import HubStudios from "../assets/home/HubStudios.png";
 
-function Hero() {
+function Projects() {
+  const projects = [
+    { img: LiberaUscita, name: "Libera Uscita" },
+    { img: AccaMagazine, name: "Acca Magazine" },
+    { img: NoteKiller, name: "Note Killer" },
+    { img: OverExposed, name: "Over Exposed" },
+    { img: HubStudios, name: "Hub Studios" },
+  ];
+
+  /* =========================
+     CURSOR TRAIL
+  ========================= */
   const pointsRef = useRef([]);
   const containerRef = useRef(null);
   const rafRef = useRef(null);
-  const navigate = useNavigate();
-  const projects = [
-    AccaMagazine,
-    LiberaUscita,
-    NoteKiller,
-    OverExposed,
-    HubStudios,
-  ];
 
   useEffect(() => {
     const points = pointsRef.current;
@@ -82,49 +87,48 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <div className="projects-page">
 
       {/* CURSOR TRAIL */}
       <div className="cursor-glow-trail" ref={containerRef} />
 
-      {/* TOP GALLERY */}
-      <div className="top-gallery-wrapper">
-        <div className="top-gallery">
-          {projects.concat(projects).map((project, index) => (
-            <div className="gallery-item" key={index}>
-              <img src={project} alt={`Project ${index + 1}`} />
-            </div>
-          ))}
+      {/* NAVBAR */}
+      <nav className="projects-nav">
+        <div className="back">←</div>
+
+        <div className="title">
+          Gabriele's Portfolio 2026
         </div>
+
+        <div className="nav-links">
+          <span className="active">Home</span>
+          <span>Packaging</span>
+          <span>Contact</span>
+        </div>
+      </nav>
+
+      {/* GIF */}
+      <div className="intro-gif">
+        <img src={IntroGif} alt="Intro" />
       </div>
 
-      {/* CENTER */}
-      <div className="hero-content">
-        <p className="welcome-text">
-          Welcome <span>to</span>
-        </p>
-
-        <h1 className="main-title">
-          GABRIELE'S PORTFOLIO
-        </h1>
-
-        <button
-          className="enter-btn"
-          onClick={() => navigate("/projects")}
-        >
-          Enter
-        </button>
+      {/* PICK TEXT */}
+      <div className="pick-text">
+        Pick your favorite.
       </div>
 
-      {/* FOOTER */}
-      <footer className="hero-footer">
-        <span>Portfolio 2026</span>
-        <span>Graphic Designer</span>
-        <span>Gabriele Di Mauro</span>
-      </footer>
+      {/* GRID */}
+      <div className="projects-grid">
+        {projects.map((p, i) => (
+          <div className="project-card" key={i}>
+            <img src={p.img} alt={p.name} />
+            <div className="project-name">{p.name}</div>
+          </div>
+        ))}
+      </div>
 
-    </section>
+    </div>
   );
 }
 
-export default Hero;
+export default Projects;
