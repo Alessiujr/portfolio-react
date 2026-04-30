@@ -1,20 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* =========================
+   HERO PAGE
+========================= */
 
 .hero {
   min-height: 100vh;
   background: #000;
   color: white;
-  padding: 30px 40px;
+
+  padding: clamp(20px, 2vw, 40px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   overflow: hidden;
   position: relative;
-  font-family: "Libre Caslon Text", serif;
 }
 
 /* =========================
@@ -30,9 +29,11 @@
 
 .trail-blob {
   position: absolute;
-  width: 260px;
-  height: 180px;
+  width: clamp(160px, 14vw, 260px);
+  height: clamp(120px, 10vw, 180px);
+
   border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+
   background: radial-gradient(
     circle,
     rgba(255, 190, 80, 0.55),
@@ -40,26 +41,27 @@
     rgba(255, 80, 0, 0.35),
     transparent
   );
+
   filter: blur(60px);
   mix-blend-mode: screen;
 }
 
 /* =========================
-   GALLERY WRAPPER
+   TOP GALLERY
 ========================= */
 
 .top-gallery-wrapper {
   width: 100%;
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 
 .top-gallery {
   display: flex;
-  gap: 28px;
+  gap: clamp(12px, 1.5vw, 28px);
   width: max-content;
   animation: scrollGallery 18s linear infinite;
-  z-index: 2;
 }
 
 .top-gallery-wrapper:hover .top-gallery {
@@ -80,8 +82,9 @@
 ========================= */
 
 .gallery-item {
-  width: 180px;
-  height: 180px;
+  width: clamp(110px, 10vw, 180px);
+  height: clamp(110px, 10vw, 180px);
+
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 12px;
@@ -115,7 +118,7 @@
   bottom: 10px;
   left: 10px;
 
-  font-size: 18px;
+  font-size: clamp(12px, 1vw, 18px);
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
@@ -123,7 +126,7 @@
   z-index: 2;
   pointer-events: none;
 
-  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* =========================
@@ -136,12 +139,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   z-index: 2;
+  text-align: center;
 }
 
 .welcome-text {
-  font-size: 5.5rem;
-  letter-spacing: -0.5px;
+  font-size: clamp(2rem, 5vw, 5.5rem);
+  letter-spacing: -1px;
   line-height: 0.95;
 }
 
@@ -150,9 +155,8 @@
 }
 
 .main-title {
-  font-size: 7rem;
-  text-align: center;
-  margin-bottom: 40px;
+  font-size: clamp(2.8rem, 7vw, 7rem);
+  margin-bottom: clamp(20px, 3vw, 40px);
 
   letter-spacing: -2px;
   line-height: 0.85;
@@ -168,8 +172,11 @@
   color: #000;
   border: none;
   border-radius: 20px;
-  padding: 22px 60px;
-  font-size: 2.2rem;
+
+  padding: clamp(14px, 1.5vw, 22px)
+    clamp(30px, 4vw, 60px);
+
+  font-size: clamp(1rem, 2vw, 2.2rem);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -187,8 +194,11 @@
 .hero-footer {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  align-items: center;
+
+  font-size: clamp(12px, 0.9vw, 14px);
   opacity: 0.9;
-  letter-spacing: -0.2px;
   line-height: 1;
+
+  z-index: 2;
 }

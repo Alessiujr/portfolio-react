@@ -1,12 +1,20 @@
-html, body {
-  font-family: "Libre Caslon Text", serif;
+/* =========================
+   GLOBAL RESET
+========================= */
+
+html,
+body {
   margin: 0;
   padding: 0;
-  /* base typographic tuning */
-  letter-spacing: -1px;
-  
+  font-family: "Libre Caslon Text", serif;
+  letter-spacing: -0.5px;
+  background: #000;
+  color: #fff;
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: inherit;
 }
