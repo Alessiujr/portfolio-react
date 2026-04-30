@@ -1,0 +1,50 @@
+import "./LiberaUscita.css";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+
+/* GIF */
+import Gif from "../assets/liberauscita/LiberaUscita.gif";
+
+/* IMMAGINI */
+import Img1 from "../assets/liberauscita/Rebecca Red 1.jpg";
+import Img2 from "../assets/liberauscita/Rebecca Red 2.jpg";
+import Img3 from "../assets/liberauscita/Rebecca Red 3.jpg";
+import Img4 from "../assets/liberauscita/Rebecca Red 4.jpg";
+import Img5 from "../assets/liberauscita/Rebecca Red 5.jpg";
+import Img6 from "../assets/liberauscita/Rebecca Red 6.jpg";
+import Img7 from "../assets/liberauscita/Rebecca Red 7.jpg";
+import Img8 from "../assets/liberauscita/Rebecca Red 8.jpg";
+import Img9 from "../assets/liberauscita/Rebecca Red 9.jpg";
+
+function LiberaUscita() {
+  const navigate = useNavigate();
+
+  const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9];
+
+  return (
+    <div className="libera-page">
+
+      <div className="libera-wrapper">
+
+        <Navbar active="projects" />
+
+        <div className="intro-gif">
+          <img src={Gif} alt="Libera Uscita" />
+        </div>
+
+        <div className="red-line" />
+
+        <div className="images-grid">
+          {images.map((img, i) => (
+            <div key={i} className="image-card">
+              <img src={img} alt={`img-${i}`} />
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
+export default LiberaUscita;

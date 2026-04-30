@@ -1,0 +1,63 @@
+.libera-page {
+  background: #000;
+  min-height: 100vh;
+  color: white;
+}
+
+.libera-wrapper {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+/* GIF */
+.intro-gif img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* LINEA ROSSA */
+.red-line {
+  width: 100%;
+  height: 2px;
+  background: #ff2a2a;
+  margin: 25px 0;
+}
+
+/* GRID */
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-bottom: 60px;
+}
+
+.image-card {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .images-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .images-grid {
+    grid-template-columns: 1fr;
+  }
+}
