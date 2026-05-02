@@ -9,6 +9,8 @@ import { ContactProvider } from "./context/ContactContext";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import LiberaUscita from "./sections/LiberaUscita";
+import OverExposed from "./sections/OverExposed";
+
 import ContactModal from "./components/ContactModal";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -23,6 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Hero />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/libera-uscita" element={<LiberaUscita />} />
+        <Route path="/over-exposed" element={<OverExposed />} />
       </Routes>
 
     </ContactProvider>

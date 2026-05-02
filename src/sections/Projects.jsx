@@ -3,6 +3,7 @@ import "./Projects.css";
 import { useNavigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 /* GIF */
 import IntroGif from "../assets/projects/Intro.gif";
@@ -25,7 +26,11 @@ function Projects() {
     },
     { img: AccaMagazine, name: "Acca Magazine" },
     { img: NoteKiller, name: "Note Killer" },
-    { img: OverExposed, name: "Over Exposed" },
+    {
+      img: OverExposed,
+      name: "Over Exposed",
+      path: "/over-exposed",
+    },
     { img: HubStudios, name: "Hub Studios" },
   ];
 
@@ -121,6 +126,8 @@ function Projects() {
         </div>
 
       </div>
+
+      <Footer />
     </div>
   );
 }

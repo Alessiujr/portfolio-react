@@ -1,0 +1,14 @@
+.footer {
+  width: min(90%, 1200px); /* 🔥 uguale al wrapper/navbar */
+  margin: 60px auto 0;     /* centrato come il contenuto */
+
+  height: 40px;
+  background: #6b0f1a;
+
+  position: relative;
+  z-index: 10; /* 🔥 sopra il cursor glow */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

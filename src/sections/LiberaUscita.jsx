@@ -1,5 +1,6 @@
 import "./LiberaUscita.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 /* GIF */
 import Gif from "../assets/liberauscita/LiberaUscita.gif";
@@ -64,6 +65,7 @@ function LiberaUscita() {
             </div>
 
       </div>
+      <Footer />
     </div>
   );
 }
