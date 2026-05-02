@@ -1,5 +1,5 @@
 .footer {
-  width: min(90%, 1200px); /* 🔥 uguale al wrapper/navbar */
+  width: min(100%, 1200px); /* 🔥 uguale al wrapper/navbar */
   margin: 60px auto 0;     /* centrato come il contenuto */
 
   height: 40px;

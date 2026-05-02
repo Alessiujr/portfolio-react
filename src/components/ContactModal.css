@@ -23,9 +23,15 @@
 .contact-modal {
   width: min(90%, 850px);
   background: #000;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* BORDO BIANCO SOTTILE */
+  border: 1px solid #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /* immagine */
@@ -42,14 +48,12 @@
 .contact-info {
   width: 100%;
   background: #fff;
-  padding: 22px 0;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
 
-  padding: 10px 18px; /* più sottile */
-  justify-content: flex-start; /* testo a sinistra */
+  padding: 10px 18px;
 }
 
 /* =========================
