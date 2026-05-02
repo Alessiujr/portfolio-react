@@ -10,6 +10,8 @@ import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import LiberaUscita from "./sections/LiberaUscita";
 import OverExposed from "./sections/OverExposed";
+import NoteKiller from "./sections/NoteKiller";
+
 
 import ContactModal from "./components/ContactModal";
 
@@ -26,6 +28,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/projects" element={<Projects />} />
         <Route path="/libera-uscita" element={<LiberaUscita />} />
         <Route path="/over-exposed" element={<OverExposed />} />
+        <Route path="/note-killer" element={<NoteKiller />} />
       </Routes>
 
     </ContactProvider>

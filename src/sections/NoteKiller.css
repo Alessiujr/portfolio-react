@@ -1,0 +1,100 @@
+.notekiller-page {
+  background: #000;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.notekiller-wrapper {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+/* TITLE PRINCIPALE */
+.nk-title {
+  margin: 30px auto 25px;
+  width: fit-content;
+
+  background: #ff2a2a;
+  color: #fff;
+
+  padding: 14px 34px;
+  border-radius: 12px;
+
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+/* GIF */
+.intro-gif img {
+  width: 100%;
+  display: block;
+}
+
+/* LINEA ROSSA */
+.red-line {
+  width: 100%;
+  height: 2px;
+  background: #ff2a2a;
+  margin: 25px 0;
+}
+
+/* SANTINI TITLE */
+.nk-section-title {
+  margin: 60px auto 60px;
+  width: fit-content;
+
+  background: #ff2a2a;
+  color: #fff;
+
+  padding: 14px 34px;
+  border-radius: 12px;
+
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+/* GRID (MAX 2 PER RIGA) */
+.nk-grid {
+  width: 80%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  /* ORIZZONTALE (tra colonne) */
+  column-gap: 50px;
+
+  /* VERTICALE (tra righe, più ampio come vuoi tu) */
+  row-gap: 80px;
+
+  padding-bottom: 80px;
+}
+
+/* CARD */
+.nk-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* IMMAGINI VERTICALI */
+.nk-card img {
+  width: 100%;
+  
+  object-fit: cover;
+}
+
+/* CAPTION SOTTO (SINISTRA) */
+.nk-caption {
+  font-size: 32px;
+  color: #fff;
+  text-align: left;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .nk-grid {
+    grid-template-columns: 1fr;
+  }
+}

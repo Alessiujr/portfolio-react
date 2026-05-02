@@ -25,7 +25,11 @@ function Projects() {
       path: "/libera-uscita",
     },
     { img: AccaMagazine, name: "Acca Magazine" },
-    { img: NoteKiller, name: "Note Killer" },
+    {
+      img: NoteKiller,
+      name: "Note Killer",
+      path: "/note-killer",
+    },
     {
       img: OverExposed,
       name: "Over Exposed",
