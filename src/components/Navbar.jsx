@@ -4,7 +4,6 @@ import "./Navbar.css";
 
 function Navbar() {
   const navigate = useNavigate();
-  const location = useLocation();
   const { openContact } = useContact();
 
   return (
@@ -17,15 +16,15 @@ function Navbar() {
         </button>
       </div>
 
-      {/* CENTER TITLE */}
+      {/* CENTER */}
       <div className="nav-center">
         Gabriele's Portfolio 2026
       </div>
 
-      {/* RIGHT LINKS */}
+      {/* RIGHT */}
       <div className="nav-right">
 
-        {/* HOME → ROSSO OVALE SEMPRE */}
+        {/* HOME (UNICO DIVERSO) */}
         <button
           className="home-btn"
           onClick={() => navigate("/")}
@@ -33,18 +32,19 @@ function Navbar() {
           Home
         </button>
 
-        {/* PROJECTS → ATTIVO ROSSO OVALE */}
+        {/* PACKAGING (SEMPRE UGUALE) */}
         <button
-          className={`nav-btn ${
-            location.pathname === "/projects" ? "active" : ""
-          }`}
+          className="nav-btn"
           onClick={() => navigate("/projects")}
         >
-          Projects
+          Packaging
         </button>
 
-        {/* CONTACT → APRE MODALE */}
-        <button className="nav-btn contact-btn" onClick={openContact}>
+        {/* CONTACT (SEMPRE UGUALE + MODALE) */}
+        <button
+          className="nav-btn"
+          onClick={openContact}
+        >
           Contact
         </button>
 
