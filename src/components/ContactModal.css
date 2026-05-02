@@ -1,0 +1,77 @@
+/* =========================
+   OVERLAY
+========================= */
+
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.contact-modal {
+  width: min(90%, 850px);
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* immagine */
+.contact-modal img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}
+
+/* =========================
+   INFO BOX SOTTO
+========================= */
+
+.contact-info {
+  width: 100%;
+  background: #fff;
+  padding: 22px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 18px; /* più sottile */
+  justify-content: flex-start; /* testo a sinistra */
+}
+
+/* =========================
+   INSTAGRAM LINK
+========================= */
+
+.instagram-link {
+  background: #ff2a2a;
+  color: white;
+
+  padding: 10px 28px;
+  border-radius: 8px;
+
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  transition: 0.3s ease;
+}
+
+.instagram-link:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+}

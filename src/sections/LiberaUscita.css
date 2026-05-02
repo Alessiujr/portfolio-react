@@ -9,31 +9,70 @@
   margin: 0 auto;
 }
 
-/* GIF */
-.intro-gif img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
+/* =========================
+   TITLE BADGE
+========================= */
+
+.libera-title {
+  width: fit-content;
+  margin: 28px auto 28px;
+
+  background: #ff2a2a;
+  color: white;
+
+  padding: 14px 32px;
+  border-radius: 12px;
+
+  font-size: clamp(30px, 1.8vw, 32px);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
 }
 
-/* LINEA ROSSA */
+/* =========================
+   GIF
+========================= */
+
+.intro-gif img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}
+
+/* =========================
+   RED LINE
+========================= */
+
 .red-line {
   width: 100%;
   height: 2px;
   background: #ff2a2a;
-  margin: 25px 0;
+  margin: 28px 0;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
+
 .images-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+
+  /* 80% della larghezza e centrato */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* più spazio tra le immagini */
+  column-gap: 48px;
+  row-gap: 24px;
+
   padding-bottom: 60px;
 }
 
+/* rettangolare verticale */
 .image-card {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -42,6 +81,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+
   transition: transform 0.4s ease;
 }
 
@@ -49,7 +90,27 @@
   transform: scale(1.05);
 }
 
-/* RESPONSIVE */
+/* =========================
+   CREDITS
+========================= */
+
+.credits {
+  width: 80%;
+  margin: 30px auto 60px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.credits p {
+  margin: 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 900px) {
   .images-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -59,5 +120,10 @@
 @media (max-width: 600px) {
   .images-grid {
     grid-template-columns: 1fr;
+  }
+
+  .libera-title {
+    text-align: center;
+    width: 100%;
   }
 }

@@ -1,5 +1,4 @@
 import "./LiberaUscita.css";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 /* GIF */
@@ -17,30 +16,52 @@ import Img8 from "../assets/liberauscita/Rebecca Red 8.jpg";
 import Img9 from "../assets/liberauscita/Rebecca Red 9.jpg";
 
 function LiberaUscita() {
-  const navigate = useNavigate();
-
-  const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9];
+  const images = [
+    Img1,
+    Img2,
+    Img3,
+    Img4,
+    Img5,
+    Img6,
+    Img7,
+    Img8,
+    Img9,
+  ];
 
   return (
     <div className="libera-page">
-
       <div className="libera-wrapper">
 
         <Navbar active="projects" />
 
+        {/* TITLE BADGE */}
+        <div className="libera-title">
+          LIBERA USCITA VOL.1
+        </div>
+
+        {/* GIF */}
         <div className="intro-gif">
           <img src={Gif} alt="Libera Uscita" />
         </div>
 
+        {/* RED LINE */}
         <div className="red-line" />
 
+        {/* IMAGES GRID */}
         <div className="images-grid">
           {images.map((img, i) => (
             <div key={i} className="image-card">
-              <img src={img} alt={`img-${i}`} />
+              <img src={img} alt={`Rebecca Red ${i + 1}`} />
             </div>
           ))}
         </div>
+
+        {/* CREDIT */}
+        <div className="credits">
+            <p>Credit:</p>
+            <p>Photographer: Simone Sanfilippo</p>
+            <p>Model: Rebecca Intermite</p>
+            </div>
 
       </div>
     </div>
