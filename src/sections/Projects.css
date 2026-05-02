@@ -80,16 +80,13 @@
 ========================= */
 
 .pick-text {
-    margin: clamp(30px, 4vw, 50px) auto 20px;
+    margin: clamp(30px, 4vw, 50px) auto 30px;
     width: fit-content;
-
     background: #ff2a2a;
     color: #fff;
-
     padding: 14px 28px;
     border-radius: 10px;
-
-    font-size: clamp(14px, 1.5vw, 20px);
+    font-size: 40px;
 }
 
 /* =========================
@@ -156,34 +153,6 @@
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 1px;
-}
-
-/* =========================
-   CONTACT MODAL
-========================= */
-
-.contact-overlay {
-    position: fixed;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(10px);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 999;
-}
-
-.contact-modal {
-    width: min(90%, 850px);
-}
-
-.contact-modal img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
 /* =========================

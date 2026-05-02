@@ -11,7 +11,7 @@ import Projects from "./sections/Projects";
 import LiberaUscita from "./sections/LiberaUscita";
 import OverExposed from "./sections/OverExposed";
 import NoteKiller from "./sections/NoteKiller";
-
+import AttaccoManoide from "./sections/AttaccoManoide";
 
 import ContactModal from "./components/ContactModal";
 
@@ -29,6 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/libera-uscita" element={<LiberaUscita />} />
         <Route path="/over-exposed" element={<OverExposed />} />
         <Route path="/note-killer" element={<NoteKiller />} />
+        <Route path="/attacco-manoide" element={<AttaccoManoide />} />
       </Routes>
 
     </ContactProvider>

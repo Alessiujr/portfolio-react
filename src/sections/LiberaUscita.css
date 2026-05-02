@@ -54,16 +54,14 @@
    GRID
 ========================= */
 
-.images-grid {
+.libera-page .images-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  /* 80% della larghezza e centrato */
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 
-  /* più spazio tra le immagini */
   column-gap: 48px;
   row-gap: 24px;
 

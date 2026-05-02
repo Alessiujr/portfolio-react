@@ -14,6 +14,7 @@ import LiberaUscita from "../assets/home/LiberaUscita.jpg";
 import NoteKiller from "../assets/home/NoteKiller.PNG";
 import OverExposed from "../assets/home/OverExposed.jpg";
 import HubStudios from "../assets/home/HubStudios.png";
+import AttaccoManoide from "../assets/home/Mano1.png";
 
 function Projects() {
   const navigate = useNavigate();
@@ -24,7 +25,17 @@ function Projects() {
       name: "Libera Uscita",
       path: "/libera-uscita",
     },
-    { img: AccaMagazine, name: "Acca Magazine" },
+    {
+      img: null, // MDW 2026 (da inserire)
+      name: "MDW 2026",
+      path: "/mdw-2026",
+    },
+    {
+      img: AttaccoManoide, // Attacco Manoide
+      name: "Attacco Manoide",
+      path: "/attacco-manoide",
+    },
+
     {
       img: NoteKiller,
       name: "Note Killer",
@@ -35,7 +46,20 @@ function Projects() {
       name: "Over Exposed",
       path: "/over-exposed",
     },
-    { img: HubStudios, name: "Hub Studios" },
+    {
+      img: HubStudios,
+      name: "Hub Studios",
+    },
+
+    {
+      img: null, // Mosaico Festival (da inserire)
+      name: "Mosaico Festival",
+      path: "/mosaico-festival",
+    },
+    {
+      img: AccaMagazine,
+      name: "Acca Magazine",
+    },
   ];
 
   const pointsRef = useRef([]);
