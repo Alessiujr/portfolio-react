@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 /* ASSETS */
 import Gif from "../assets/attaccomanoide/AttaccoManoide.gif";
 import Mano2 from "../assets/attaccomanoide/Mano2.png";
-import Mano1 from "../assets/attaccomanoide/Mano1.png";
+import Mano1 from "../assets/attaccomanoide/Mano1.webp";
 
 function AttaccoManoide() {
   return (

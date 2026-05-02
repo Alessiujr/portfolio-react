@@ -14,7 +14,7 @@ import LiberaUscita from "../assets/home/LiberaUscita.jpg";
 import NoteKiller from "../assets/home/NoteKiller.PNG";
 import OverExposed from "../assets/home/OverExposed.jpg";
 import HubStudios from "../assets/home/HubStudios.png";
-import AttaccoManoide from "../assets/home/Mano1.png";
+import AttaccoManoide from "../assets/home/Mano1.webp";
 
 function Projects() {
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ function Projects() {
     {
       img: null, // MDW 2026 (da inserire)
       name: "MDW 2026",
-      path: "/mdw-2026",
+      path: "/mdw-26",
     },
     {
       img: AttaccoManoide, // Attacco Manoide

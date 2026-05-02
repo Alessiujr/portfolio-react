@@ -1,0 +1,86 @@
+.mdw-page {
+  background: #000;
+  min-height: 100vh;
+  color: white;
+}
+
+.mdw-wrapper {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.mdw-title {
+  width: fit-content;
+  margin: 28px auto;
+
+  background: #ff2a2a;
+  color: #fff;
+
+  padding: 14px 32px;
+  border-radius: 12px;
+
+  font-size: clamp(20px, 2.2vw, 32px);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* =========================
+   GIF
+========================= */
+
+.intro-gif {
+  width: 100%;
+  overflow: hidden;
+}
+
+.intro-gif img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================
+   RED LINE
+========================= */
+
+.red-line {
+  width: 100%;
+  height: 2px;
+  background: #ff2a2a;
+  margin: 28px 0;
+}
+
+/* =========================
+   FOOTER SPACING FIX (opzionale)
+========================= */
+
+.mdw-wrapper {
+  padding-bottom: 40px;
+}
+
+/* =========================
+   RESPONSIVE TWEAKS
+========================= */
+
+@media (max-width: 900px) {
+  .mdw-title {
+    padding: 12px 24px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mdw-title {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .mdw-wrapper {
+    width: 92%;
+  }
+}
