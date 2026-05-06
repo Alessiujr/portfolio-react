@@ -8,46 +8,47 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-
       {/* LEFT */}
       <div className="nav-left">
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          ←
+        <button className="back-btn" title="Back" onClick={() => navigate(-1)}>
+          <span>←</span>
         </button>
       </div>
 
       {/* CENTER */}
       <div className="nav-center">
-        Gabriele's Portfolio 2026
+        <span className="portfolio-title">Gabriele's Portfolio</span>
+        <span className="portfolio-year">2026</span>
       </div>
 
       {/* RIGHT */}
       <div className="nav-right">
-
-        {/* HOME (UNICO DIVERSO) */}
         <button
           className="home-btn"
           onClick={() => navigate("/")}
+          title="Home"
         >
-          Home
+          <span className="nav-icon">⌂</span>
+          <span>Home</span>
         </button>
 
-        {/* PACKAGING (SEMPRE UGUALE) */}
         <button
           className="nav-btn"
           onClick={() => navigate("/projects")}
+          title="Packaging Projects"
         >
-          Packaging
+          <span className="nav-icon">◆</span>
+          <span>Packaging</span>
         </button>
 
-        {/* CONTACT (SEMPRE UGUALE + MODALE) */}
         <button
           className="nav-btn"
           onClick={openContact}
+          title="Get in touch"
         >
-          Contact
+          <span className="nav-icon">✉</span>
+          <span>Contact</span>
         </button>
-
       </div>
     </nav>
   );

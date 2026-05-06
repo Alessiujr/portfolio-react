@@ -10,11 +10,13 @@ import IntroGif from "../assets/projects/Intro.gif";
 
 /* IMMAGINI */
 import AccaMagazine from "../assets/home/AccaMagazine.png";
+import MilanoScannerWeek from "../assets/home/mdw26.png";
 import LiberaUscita from "../assets/home/LiberaUscita.jpg";
 import NoteKiller from "../assets/home/NoteKiller.PNG";
 import OverExposed from "../assets/home/OverExposed.jpg";
 import HubStudios from "../assets/home/HubStudios.png";
-import AttaccoManoide from "../assets/home/Mano1.webp";
+import AttaccoManoide from "../assets/home/Mano1.png";
+import MosaicoFestival from "../assets/home/MosaicoFestival.png";
 
 function Projects() {
   const navigate = useNavigate();
@@ -23,42 +25,50 @@ function Projects() {
     {
       img: LiberaUscita,
       name: "Libera Uscita",
+      subtitle: "Gabriele Di Mauro - Simone Sanfilippo",
       path: "/libera-uscita",
     },
     {
-      img: null, // MDW 2026 (da inserire)
+      img: MilanoScannerWeek,
       name: "MDW 2026",
+      subtitle: "Milano Scanner Week 2026",
       path: "/mdw-26",
     },
     {
-      img: AttaccoManoide, // Attacco Manoide
+      img: AttaccoManoide,
       name: "Attacco Manoide",
+      subtitle: "Gabriele Di Mauro",
       path: "/attacco-manoide",
     },
 
     {
       img: NoteKiller,
       name: "Note Killer",
+      subtitle: "Instagram Setup",
       path: "/note-killer",
     },
     {
       img: OverExposed,
-      name: "Over Exposed",
+      name: "OverExposed",
+      subtitle: "Gabriele Di Mauro - Simone Sanfilippo - Luca Gentile",
       path: "/over-exposed",
     },
     {
       img: HubStudios,
-      name: "Hub Studios",
+      name: "HubStudios.",
+      subtitle: "Ready to inspire the new generation",
     },
 
     {
-      img: null, // Mosaico Festival (da inserire)
-      name: "Mosaico Festival",
+      img: MosaicoFestival,
+      //name: "Mosaico Festival",
+      //subtitle: "5 - 10 August 2025",
       path: "/mosaico-festival",
     },
     {
       img: AccaMagazine,
       name: "Acca Magazine",
+      subtitle: "Think, Read, Share.",
     },
   ];
 
@@ -148,7 +158,10 @@ function Projects() {
               onClick={() => p.path && navigate(p.path)}
             >
               <img src={p.img} alt={p.name} />
-              <div className="project-name">{p.name}</div>
+              <div className="project-text">
+                <div className="project-name">{p.name}</div>
+                <div className="project-subtitle">{p.subtitle}</div>
+              </div>
             </div>
           ))}
         </div>
