@@ -1,4 +1,4 @@
-import "./LiberaUscita.css";
+import "../layouts/LiberaUscita.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 

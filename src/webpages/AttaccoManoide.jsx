@@ -1,4 +1,4 @@
-import "./AttaccoManoide.css";
+import "../layouts/AttaccoManoide.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 

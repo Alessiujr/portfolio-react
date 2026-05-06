@@ -6,18 +6,18 @@ import "./index.css";
 
 import { ContactProvider } from "./context/ContactContext";
 
-import Hero from "./sections/Hero";
-import Projects from "./sections/Projects";
-import LiberaUscita from "./sections/LiberaUscita";
-import OverExposed from "./sections/OverExposed";
-import NoteKiller from "./sections/NoteKiller";
-import AttaccoManoide from "./sections/AttaccoManoide";
-import Mdw26 from "./sections/Mdw26";
+import Hero from "./webpages/Hero";
+import Projects from "./webpages/Projects";
+import LiberaUscita from "./webpages/LiberaUscita";
+import OverExposed from "./webpages/OverExposed";
+import NoteKiller from "./webpages/NoteKiller";
+import AttaccoManoide from "./webpages/AttaccoManoide";
+import Mdw26 from "./webpages/Mdw26";
 
 import ContactModal from "./components/ContactModal";
 
-import TermsOfService from "./sections/TermsOfService";
-import PrivacyPolicy from "./sections/PrivacyPolicy";
+import TermsOfService from "./webpages/TermsOfService";
+import PrivacyPolicy from "./webpages/PrivacyPolicy";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>

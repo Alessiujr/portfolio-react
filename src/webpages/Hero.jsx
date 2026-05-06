@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./Hero.css";
+import "../layouts/Hero.css";
 import { useNavigate } from "react-router-dom";
 
 /* IMMAGINI */

@@ -1,4 +1,4 @@
-import "./NoteKiller.css";
+import "../layouts/NoteKiller.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 

@@ -1,4 +1,4 @@
-import "./OverExposed.css";
+import "../layouts/OverExposed.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 

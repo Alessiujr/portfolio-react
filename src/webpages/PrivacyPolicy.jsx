@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "./LegalPages.css";
+import "../layouts/LegalPages.css";
 
 function PrivacyPolicy() {
   return (

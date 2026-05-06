@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./Projects.css";
+import "../layouts/Projects.css";
 import { useNavigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar";

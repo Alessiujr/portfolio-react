@@ -1,4 +1,4 @@
-import "./Mdw26.css";
+import "../layouts/Mdw26.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
