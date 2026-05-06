@@ -16,6 +16,9 @@ import Mdw26 from "./sections/Mdw26";
 
 import ContactModal from "./components/ContactModal";
 
+import TermsOfService from "./sections/TermsOfService";
+import PrivacyPolicy from "./sections/PrivacyPolicy";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
 
@@ -32,6 +35,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/note-killer" element={<NoteKiller />} />
         <Route path="/attacco-manoide" element={<AttaccoManoide />} />
         <Route path="/mdw-26" element={<Mdw26 />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
       </Routes>
 
     </ContactProvider>

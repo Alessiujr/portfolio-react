@@ -44,9 +44,9 @@ function Footer() {
           © {currentYear} Gabriele Di Mauro. All rights reserved.
         </p>
         <div className="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
           <span className="divider">•</span>
-          <a href="#">Terms of Service</a>
+          <a href="/terms-of-service">Terms of Service</a>
         </div>
       </div>
     </footer>

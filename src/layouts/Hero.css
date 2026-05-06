@@ -31,19 +31,29 @@
 
 .trail-blob {
   position: absolute;
-  width: clamp(160px, 14vw, 260px);
-  height: clamp(120px, 10vw, 180px);
+
+  /* MOLTO PIÙ PICCOLO */
+  width: clamp(70px, 6vw, 120px);
+  height: clamp(55px, 5vw, 95px);
 
   border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
 
-  background: linear-gradient(135deg,
-    rgba(255, 190, 80, 0.6),
-    rgba(255, 130, 0, 0.5) 50%,
-    rgba(255, 42, 42, 0.4) 100%);
+  /* COME PRIMA: SOLO TRASPARENZA */
+  background: radial-gradient(
+    circle,
+    rgba(255, 190, 80, 0.35),
+    rgba(255, 130, 0, 0.28),
+    rgba(255, 80, 0, 0.18),
+    transparent
+  );
 
-  filter: blur(70px);
+  /* glow più pulito */
+  filter: blur(35px);
+
   mix-blend-mode: screen;
-  backdrop-filter: blur(1px);
+
+  /* rimosso effetto pesante */
+  backdrop-filter: none;
 }
 
 /* =========================
