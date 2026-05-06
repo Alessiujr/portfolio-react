@@ -11,6 +11,36 @@
 }
 
 /* =========================
+   PROJECT CARD IMAGE
+========================= */
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    transition: transform 0.4s ease;
+
+    /* CONTORNO BIANCO */
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    background: #000; /* evita spazi brutti ai lati */
+}
+
+/* SOLO per la card di MDW 2026 */
+.project-card img[alt="MDW 2026"] {
+    object-fit: contain;
+    transform: rotate(90deg); /* base */
+    transform-origin: center;
+    background: #000;
+}
+
+/* hover uguale alle altre card */
+.project-card:hover img[alt="MDW 2026"] {
+    transform: rotate(90deg) scale(1.10); /* leggero zoom mantenendo rotazione */
+}
+
+/* =========================
    WRAPPER CENTRALE
 ========================= */
 
@@ -144,15 +174,42 @@
     transform: scale(1.05);
 }
 
-.project-name {
+.project-text {
     position: absolute;
     bottom: 12px;
     left: 12px;
+    right: 12px; /* così il testo usa tutta la larghezza disponibile */
+    z-index: 2;
+}
 
-    font-size: clamp(16px, 2vw, 28px);
+.project-name {
+    font-size: clamp(12px, 1.4vw, 24px); /* più dinamico */
     text-transform: uppercase;
     color: #fff;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+
+    /* resta sempre dentro la card */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-subtitle {
+    margin-top: 4px;
+
+    font-size: clamp(8px, 0.75vw, 12px);
+    color: #fff;
+    opacity: 0.9;
+
+    text-transform: none;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+
+    /* anche il sottotitolo resta dentro */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* =========================

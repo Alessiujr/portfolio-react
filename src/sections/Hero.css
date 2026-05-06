@@ -64,10 +64,6 @@
   animation: scrollGallery 18s linear infinite;
 }
 
-.top-gallery-wrapper:hover .top-gallery {
-  animation-play-state: paused;
-}
-
 @keyframes scrollGallery {
   0% {
     transform: translateX(0);
@@ -99,6 +95,19 @@
   object-fit: cover;
   border-radius: 12px;
   transition: transform 0.4s ease;
+}
+
+/* SOLO immagine Milano Scanner Week */
+.gallery-item img[alt="Milano Scanner Week"] {
+  object-fit: contain;
+  transform: rotate(90deg);
+  transform-origin: center;
+  background: #000;
+}
+
+/* hover mantenendo la rotazione */
+.gallery-item:hover img[alt="Milano Scanner Week"] {
+  transform: rotate(90deg) scale(1.10);
 }
 
 .gallery-item:hover {

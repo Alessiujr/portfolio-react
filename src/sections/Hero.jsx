@@ -3,11 +3,15 @@ import "./Hero.css";
 import { useNavigate } from "react-router-dom";
 
 /* IMMAGINI */
-import AccaMagazine from "../assets/home/AccaMagazine.png";
 import LiberaUscita from "../assets/home/LiberaUscita.jpg";
+import MilanoScannerWeek from "../assets/home/mdw26.png";
+import AttaccoManoide from "../assets/home/Mano1.png";
 import NoteKiller from "../assets/home/NoteKiller.PNG";
 import OverExposed from "../assets/home/OverExposed.jpg";
+import AccaMagazine from "../assets/home/AccaMagazine.png";
 import HubStudios from "../assets/home/HubStudios.png";
+import MosaicoFestival from "../assets/home/MosaicoFestival.png";
+
 
 function Hero() {
   const navigate = useNavigate();
@@ -17,11 +21,14 @@ function Hero() {
   const rafRef = useRef(null);
 
   const projects = [
-    { img: AccaMagazine, name: "AccaMagazine" },
     { img: LiberaUscita, name: "Libera Uscita" },
+    { img: MilanoScannerWeek, name: "Milano Scanner Week" },
+    { img: AttaccoManoide, name: "Attacco Manoide" },
     { img: NoteKiller, name: "Note Killer" },
     { img: OverExposed, name: "OverExposed" },
     { img: HubStudios, name: "HubStudios." },
+    { img: AccaMagazine, name: "AccaMagazine" },
+    { img: MosaicoFestival, name: "Mosaico Festival" },
   ];
 
   useEffect(() => {
