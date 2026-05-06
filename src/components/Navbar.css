@@ -5,11 +5,13 @@
   align-items: center;
   background: #6b0f1a;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 16px 24px;
+  padding: 16px clamp(16px, 5vw, 40px);
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* CENTER */

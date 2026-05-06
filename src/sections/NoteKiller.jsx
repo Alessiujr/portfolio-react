@@ -48,9 +48,10 @@ function NoteKiller() {
 
   return (
     <div className="notekiller-page">
-      <div className="notekiller-wrapper">
+      {/* NAVBAR FULL-WIDTH */}
+      <Navbar active="projects" />
 
-        <Navbar active="projects" />
+      <div className="notekiller-wrapper">
 
         {/* TITLE */}
         <div className="nk-title">NOTE KILLER</div>

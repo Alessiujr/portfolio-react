@@ -138,10 +138,10 @@ function Projects() {
 
       <div className="cursor-glow-trail" ref={containerRef} />
 
-      <div className="projects-wrapper">
+      {/* NAVBAR FULL-WIDTH */}
+      <Navbar active="projects" />
 
-        {/* NAVBAR RIUTILIZZATA */}
-        <Navbar active="projects" />
+      <div className="projects-wrapper">
 
         {/* GIF */}
         <div className="intro-gif">

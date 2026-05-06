@@ -26,10 +26,10 @@ function OverExposed() {
 
   return (
     <div className="over-page">
+      {/* NAVBAR FULL-WIDTH */}
+      <Navbar active="projects" />
+
       <div className="over-wrapper">
-
-        <Navbar active="projects" />
-
         {/* TITLE */}
         <div className="project-label">
           OVEREXPOSED

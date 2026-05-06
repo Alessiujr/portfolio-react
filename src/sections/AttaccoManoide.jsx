@@ -10,10 +10,10 @@ import Mano1 from "../assets/attaccomanoide/Mano1.png";
 function AttaccoManoide() {
   return (
     <div className="amano-page">
+      {/* NAVBAR FULL-WIDTH */}
+      <Navbar active="projects" />
+
       <div className="amano-wrapper">
-
-        <Navbar active="projects" />
-
         {/* TITLE */}
         <div className="amano-title">
           ATTACCO MANOIDE
@@ -45,9 +45,8 @@ function AttaccoManoide() {
           Attacco Manoide - Gabriele Di Mauro
         </div>
 
-        <Footer />
-
       </div>
+      <Footer />
     </div>
   );
 }

@@ -31,10 +31,10 @@ function LiberaUscita() {
 
   return (
     <div className="libera-page">
+      {/* NAVBAR FULL-WIDTH */}
+      <Navbar active="projects" />
+
       <div className="libera-wrapper">
-
-        <Navbar active="projects" />
-
         {/* TITLE BADGE */}
         <div className="libera-title">
           LIBERA USCITA VOL.1

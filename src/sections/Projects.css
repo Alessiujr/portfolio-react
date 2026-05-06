@@ -82,27 +82,38 @@
 ========================= */
 
 .intro-gif {
-  border-radius: 0 !important;
+  border-radius: 8px !important;
   overflow: hidden;
+  margin: clamp(20px, 3vw, 40px) 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .intro-gif img {
-  border-radius: 0 !important;
+  border-radius: 8px !important;
   display: block;
+  transition: transform 0.6s ease;
+}
+
+.intro-gif:hover img {
+  transform: scale(1.02);
 }
 
 .gif-label {
     position: absolute;
-    bottom: 15px;
-    left: 15px;
+    bottom: 20px;
+    left: 20px;
 
     font-size: clamp(12px, 1vw, 16px);
     color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 
-    background: rgba(0, 0, 0, 0.4);
-    padding: 6px 12px;
-    border-radius: 6px;
-    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 42, 42, 0.2);
+    backdrop-filter: blur(8px);
 }
 
 /* =========================
@@ -110,13 +121,18 @@
 ========================= */
 
 .pick-text {
-    margin: clamp(30px, 4vw, 50px) auto 30px;
+    margin: clamp(40px, 5vw, 60px) auto;
     width: fit-content;
-    background: #ff2a2a;
+    background: linear-gradient(135deg, #ff2a2a 0%, #cc1818 100%);
     color: #fff;
-    padding: 14px 28px;
-    border-radius: 10px;
-    font-size: 40px;
+    padding: clamp(12px, 2vw, 20px) clamp(24px, 4vw, 40px);
+    border-radius: 12px;
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    box-shadow: 0 8px 30px rgba(255, 42, 42, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
 /* =========================
@@ -125,26 +141,52 @@
 
 .projects-grid {
     display: grid;
-
-    /* massimo 3 colonne */
     grid-template-columns: repeat(3, 1fr);
-
-    /* larghezza all'80% rispetto alla GIF */
-    width: 80%;
-    margin: 0 auto;
-
-    /* spazio sotto la griglia */
-    padding-bottom: 60px;
-
-    gap: clamp(12px, 1.2vw, 18px);
+    width: 85%;
+    margin: 0 auto clamp(40px, 5vw, 80px);
+    gap: clamp(18px, 2vw, 28px);
 }
 
 .project-card {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 12px;
     aspect-ratio: 1 / 1;
     cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.4),
+        inset 0 0 30px rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: #0a0a0a;
+    position: relative;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, 
+        rgba(255, 42, 42, 0.1) 0%, 
+        transparent 50%, 
+        rgba(255, 42, 42, 0.05) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 3;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card:hover {
+    border: 2px solid rgba(255, 42, 42, 0.5);
+    box-shadow: 
+        0 12px 40px rgba(255, 42, 42, 0.2),
+        inset 0 0 40px rgba(255, 42, 42, 0.1);
+    transform: translateY(-6px);
 }
 
 .project-card::after {
@@ -152,10 +194,11 @@
     position: absolute;
     inset: 0;
 
-    background: rgba(255, 0, 0, 0.4);
+    background: linear-gradient(135deg, rgba(255, 42, 42, 0.6) 0%, rgba(255, 42, 42, 0.2) 100%);
     opacity: 0;
+    z-index: 1;
 
-    transition: 0.3s ease;
+    transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .project-card:hover::after {
@@ -166,47 +209,57 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    transition: transform 0.4s ease;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 1px solid rgba(255, 42, 42, 0.1);
+    box-sizing: border-box;
+    box-shadow: 
+        inset 0 0 20px rgba(0, 0, 0, 0.3),
+        inset 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
 .project-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    border-color: rgba(255, 42, 42, 0.2);
+    box-shadow: 
+        inset 0 0 30px rgba(255, 42, 42, 0.1),
+        inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
 .project-text {
     position: absolute;
-    bottom: 12px;
-    left: 12px;
-    right: 12px; /* così il testo usa tutta la larghezza disponibile */
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 2;
+    padding: clamp(14px, 2vw, 20px);
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.95) 100%);
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-card:hover .project-text {
+    transform: translateY(0);
 }
 
 .project-name {
-    font-size: clamp(12px, 1.4vw, 24px); /* più dinamico */
+    font-size: clamp(14px, 1.8vw, 20px);
     text-transform: uppercase;
     color: #fff;
-    letter-spacing: 0.5px;
-    line-height: 1.1;
-
-    /* resta sempre dentro la card */
+    letter-spacing: 0.8px;
+    line-height: 1.2;
+    font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .project-subtitle {
-    margin-top: 4px;
-
-    font-size: clamp(8px, 0.75vw, 12px);
+    margin-top: 6px;
+    font-size: clamp(10px, 1vw, 14px);
     color: #fff;
     opacity: 0.9;
-
-    text-transform: none;
-    letter-spacing: 0.2px;
-    line-height: 1.2;
-
-    /* anche il sottotitolo resta dentro */
+    letter-spacing: 0.3px;
+    line-height: 1.3;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

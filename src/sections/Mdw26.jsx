@@ -66,10 +66,10 @@ function Mdw26() {
 
   return (
     <div className="mdw-page">
+      {/* NAVBAR FULL-WIDTH */}
+      <Navbar />
+
       <div className="mdw-wrapper">
-
-        <Navbar />
-
         {/* TITLE */}
         <div className="mdw-title">
           Malano Scanner Week26
