@@ -3,9 +3,14 @@ import ContactImg from "../assets/contact/Contact.png";
 import "./ContactModal.css";
 
 function ContactModal() {
-  const { open, closeContact } = useContact();
+  const { open, closeContact, openEmail } = useContact();
 
   if (!open) return null;
+
+  const handleEmailClick = () => {
+    closeContact();
+    openEmail();
+  };
 
   return (
     <div className="contact-overlay" onClick={closeContact}>
@@ -26,6 +31,13 @@ function ContactModal() {
           >
             Instagram
           </a>
+          <button
+            onClick={handleEmailClick}
+            className="email-link"
+            type="button"
+          >
+            Send email
+          </button>
         </div>
       </div>
     </div>

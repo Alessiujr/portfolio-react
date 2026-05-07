@@ -2,8 +2,9 @@ import { useContact } from "../context/ContactContext";
 import "./Footer.css";
 
 function Footer() {
-  const { openContact } = useContact();
+  const { openContact, openEmail } = useContact();
   const currentYear = new Date().getFullYear();
+  const instagramUrl = "https://www.instagram.com/gaabrieledimauro?igsh=NTRxOG5ldzZ5cGFi&utm_source=qr";
 
   return (
     <footer className="footer">
@@ -32,8 +33,25 @@ function Footer() {
           <h4 className="footer-heading">Connect</h4>
           <div className="footer-social">
             <a href="#" className="social-link" title="LinkedIn" aria-label="LinkedIn">in</a>
-            <a href="#" className="social-link" title="Instagram" aria-label="Instagram">@</a>
-            <a href="#" className="social-link" title="Email" aria-label="Email">✉</a>
+            <a 
+              href={instagramUrl}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-link" 
+              title="Instagram" 
+              aria-label="Instagram"
+            >
+              @
+            </a>
+            <a 
+              href="#" 
+              onClick={(e) => { e.preventDefault(); openEmail(); }}
+              className="social-link" 
+              title="Email" 
+              aria-label="Email"
+            >
+              ✉
+            </a>
           </div>
         </div>
       </div>

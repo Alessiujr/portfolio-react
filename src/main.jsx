@@ -15,6 +15,7 @@ import AttaccoManoide from "./webpages/AttaccoManoide";
 import Mdw26 from "./webpages/Mdw26";
 
 import ContactModal from "./components/ContactModal";
+import EmailModal from "./components/EmailModal";
 
 import TermsOfService from "./webpages/TermsOfService";
 import PrivacyPolicy from "./webpages/PrivacyPolicy";
@@ -24,8 +25,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
     <ContactProvider>
 
-      {/* MODALE GLOBALE */}
+      {/* MODALI GLOBALI */}
       <ContactModal />
+      <EmailModal />
 
       <Routes>
         <Route path="/" element={<Hero />} />
