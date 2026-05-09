@@ -41,12 +41,12 @@ function Footer() {
               title="Instagram" 
               aria-label="Instagram"
             >
-              @
+              IG
             </a>
             <a 
               href="#" 
               onClick={(e) => { e.preventDefault(); openEmail(); }}
-              className="social-link" 
+              className="social-link email-icon" 
               title="Email" 
               aria-label="Email"
             >
