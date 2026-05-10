@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-/* GIF */
-import IntroGif from "../assets/projects/Intro.gif";
+/* VIDEO */
+import IntroVideo from "../assets/projects/Intro.mp4";
 
 /* IMMAGINI */
 import AccaMagazine from "../assets/home/AccaMagazine.png";
@@ -20,6 +20,10 @@ import MosaicoFestival from "../assets/home/MosaicoFestival.png";
 
 function Projects() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Projects";
+  }, []);
 
   const projects = [
     {
@@ -143,9 +147,12 @@ function Projects() {
 
       <div className="projects-wrapper">
 
-        {/* GIF */}
+        {/* VIDEO */}
         <div className="intro-gif">
-          <img src={IntroGif} alt="Intro" />
+          <video autoPlay muted loop>
+            <source src={IntroVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <div className="pick-text">Pick your favorite.</div>

@@ -2,12 +2,15 @@
   min-height: 100vh;
   background: #000;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .legal-container {
   width: min(90%, 900px);
   margin: 0 auto;
   padding: 120px 0 80px;
+  flex: 1;
 }
 
 .legal-container h1 {
