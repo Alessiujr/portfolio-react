@@ -22,7 +22,7 @@ function Projects() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Projects";
+    document.title = "Gabriele's Projects";
   }, []);
 
   const projects = [
