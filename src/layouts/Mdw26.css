@@ -30,6 +30,11 @@
   display: block;
 }
 
+.intro-gif video {
+  width: 100%;
+  display: block;
+}
+
 /* RED LINE */
 .red-line {
   width: 100%;

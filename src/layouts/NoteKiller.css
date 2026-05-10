@@ -27,6 +27,11 @@
   display: block;
 }
 
+.intro-gif video {
+  width: 100%;
+  display: block;
+}
+
 /* LINEA ROSSA */
 .red-line {
   width: 100%;

@@ -1,13 +1,18 @@
 import "../layouts/AttaccoManoide.css";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 /* ASSETS */
-import Gif from "../assets/attaccomanoide/AttaccoManoide.gif";
+import Video from "../assets/attaccomanoide/AttaccoManoide.mp4";
 import Mano2 from "../assets/attaccomanoide/Mano2.png";
 import Mano1 from "../assets/attaccomanoide/Mano1.png";
 
 function AttaccoManoide() {
+  useEffect(() => {
+    document.title = "Attacco Manoide";
+  }, []);
+
   return (
     <div className="amano-page">
       {/* NAVBAR FULL-WIDTH */}
@@ -19,9 +24,12 @@ function AttaccoManoide() {
           ATTACCO MANOIDE
         </div>
 
-        {/* GIF */}
+        {/* VIDEO */}
         <div className="intro-gif">
-          <img src={Gif} alt="Attacco Manoide" />
+          <video autoPlay muted loop>
+            <source src={Video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* LINE */}

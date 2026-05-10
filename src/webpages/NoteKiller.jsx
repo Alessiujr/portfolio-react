@@ -1,9 +1,10 @@
 import "../layouts/NoteKiller.css";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-/* GIF */
-import Gif from "../assets/notekiller/Santini-Gif.gif";
+/* VIDEO */
+import Video from "../assets/notekiller/Santini-Gif.mp4";
 
 /* IMMAGINI */
 import Img1 from "../assets/notekiller/Narcoz.jpg";
@@ -27,6 +28,10 @@ import Insta7 from "../assets/notekiller/Insta7.png";
 import Insta8 from "../assets/notekiller/Insta8.png";
 
 function NoteKiller() {
+  useEffect(() => {
+    document.title = "Note Killer";
+  }, []);
+
   const images = [
     Img1, Img2, Img3, Img4, Img5,
     Img6, Img7, Img8, Img9, Img10
@@ -56,9 +61,12 @@ function NoteKiller() {
         {/* TITLE */}
         <div className="nk-title">NOTE KILLER</div>
 
-        {/* GIF */}
+        {/* VIDEO */}
         <div className="intro-gif">
-          <img src={Gif} alt="Santini Gif" />
+          <video autoPlay muted loop>
+            <source src={Video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* LINE */}

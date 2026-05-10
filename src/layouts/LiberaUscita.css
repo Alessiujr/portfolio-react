@@ -39,6 +39,12 @@
   border-radius: 0;
 }
 
+.intro-gif video {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}
+
 /* =========================
    RED LINE
 ========================= */

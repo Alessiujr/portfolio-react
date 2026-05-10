@@ -1,4 +1,5 @@
 import "../layouts/OverExposed.css";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -13,6 +14,10 @@ import Img6 from "../assets/overexposed/Luca post bonus 6.jpg";
 import Img7 from "../assets/overexposed/Luca post bonus 7.jpg";
 
 function OverExposed() {
+  useEffect(() => {
+    document.title = "OverExposed";
+  }, []);
+
   const images = [
     Img0,
     Img1,

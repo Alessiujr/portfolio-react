@@ -1,9 +1,10 @@
 import "../layouts/LiberaUscita.css";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-/* GIF */
-import Gif from "../assets/liberauscita/LiberaUscita.gif";
+/* VIDEO */
+import Video from "../assets/liberauscita/LiberaUscita.mp4";
 
 /* IMMAGINI */
 import Img1 from "../assets/liberauscita/Rebecca Red 1.jpg";
@@ -17,6 +18,10 @@ import Img8 from "../assets/liberauscita/Rebecca Red 8.jpg";
 import Img9 from "../assets/liberauscita/Rebecca Red 9.jpg";
 
 function LiberaUscita() {
+  useEffect(() => {
+    document.title = "Libera Uscita";
+  }, []);
+
   const images = [
     Img1,
     Img2,
@@ -40,9 +45,12 @@ function LiberaUscita() {
           LIBERA USCITA VOL.1
         </div>
 
-        {/* GIF */}
+        {/* VIDEO */}
         <div className="intro-gif">
-          <img src={Gif} alt="Libera Uscita" />
+          <video autoPlay muted loop>
+            <source src={Video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* RED LINE */}

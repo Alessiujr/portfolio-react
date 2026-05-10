@@ -1,9 +1,10 @@
 import "../layouts/Mdw26.css";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-/* GIF */
-import Gif from "../assets/mdw26/Mdw26.gif";
+/* VIDEO */
+import Video from "../assets/mdw26/Mdw26.mp4";
 
 /* IMMAGINI */
 import Img1 from "../assets/mdw26/mdw1.jpg";
@@ -25,6 +26,10 @@ import Img16 from "../assets/mdw26/mdw16.jpg";
 import Img17 from "../assets/mdw26/mdw17.jpg";
 
 function Mdw26() {
+  useEffect(() => {
+    document.title = "MDW 2026";
+  }, []);
+
   const sections = [
     {
       images: [Img1, Img2],
@@ -75,9 +80,12 @@ function Mdw26() {
           Malano Scanner Week26
         </div>
 
-        {/* GIF */}
+        {/* VIDEO */}
         <div className="intro-gif">
-          <img src={Gif} alt="MDW 2026" />
+          <video autoPlay muted loop>
+            <source src={Video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* LINEA ROSSA */}

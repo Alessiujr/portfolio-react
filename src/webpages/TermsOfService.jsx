@@ -1,8 +1,13 @@
 import Navbar from "../components/Navbar";
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import "../layouts/LegalPages.css";
 
 function TermsOfService() {
+  useEffect(() => {
+    document.title = "Terms of Service";
+  }, []);
+
   return (
     <div className="legal-page">
       <Navbar />

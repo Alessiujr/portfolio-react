@@ -1,8 +1,13 @@
 import Navbar from "../components/Navbar";
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import "../layouts/LegalPages.css";
 
 function PrivacyPolicy() {
+  useEffect(() => {
+    document.title = "Privacy Policy";
+  }, []);
+
   return (
     <div className="legal-page">
       <Navbar />

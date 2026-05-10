@@ -16,6 +16,10 @@ import MosaicoFestival from "../assets/home/MosaicoFestival.png";
 function Hero() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    document.title = "Gabriele's Portfolio";
+  }, []);
+
   const pointsRef = useRef([]);
   const containerRef = useRef(null);
   const rafRef = useRef(null);
