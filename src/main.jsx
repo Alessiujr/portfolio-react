@@ -6,7 +6,7 @@ import "./index.css";
 
 import { ContactProvider } from "./context/ContactContext";
 
-import Hero from "./webpages/Hero";
+import Hero from "./webpages/Home";
 import Projects from "./webpages/Projects";
 import LiberaUscita from "./webpages/LiberaUscita";
 import OverExposed from "./webpages/OverExposed";
