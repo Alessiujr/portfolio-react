@@ -112,9 +112,9 @@ function NoteKiller() {
         Presentazione Post Instagram
         </div>
 
-        <Footer />
-
       </div>
+
+      <Footer />
     </div>
   );
 }

@@ -153,6 +153,7 @@ function Projects() {
             <source src={IntroVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          <div className="gif-label">Check this out - HubStudios video.</div>
         </div>
 
         <div className="pick-text">Pick your favorite.</div>
